@@ -2,15 +2,15 @@ module BcmsBlog
   class BlogPost < ActiveRecord::Base
     acts_as_content_block :taggable => true
 
-    has_attachment :file
+    has_attachment :image
 
 
     before_save :set_published_at
 
-    belongs_to :blog
+    belongs_to          :blog
     belongs_to_category
-    belongs_to :author, :class_name => "Cms::User"
-    has_many :comments, :class_name => "BlogComment", :foreign_key => "post_id"
+    belongs_to          :author,    :class_name => "Cms::User"
+    has_many            :comments,  :class_name => "BlogComment", :foreign_key => "post_id"
 
     before_validation :set_slug
     validates_presence_of :name, :slug, :blog_id, :author_id
