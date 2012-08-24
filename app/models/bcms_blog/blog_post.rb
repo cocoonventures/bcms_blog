@@ -12,7 +12,7 @@ module BcmsBlog
     belongs_to          :author,    :class_name => "Cms::User"
     has_many            :comments,  :class_name => "BlogComment", :foreign_key => "post_id"
 
-    before_validation     :set_slug
+    before_validation   :set_slug
     validates_presence_of :name, :slug, :blog_id, :author_id
     attr_accessor         :video_url
 

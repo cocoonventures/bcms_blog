@@ -9,4 +9,4 @@
 <%= f.cms_tag_list %>
 <%= f.cms_drop_down :blog_id, BcmsBlog::Blog.editable_by(current_user).map{|b| [b.name, b.id]} %>
 <%= f.cms_file_field :image, 		:label => "Image" %>
-<%= f.cms_file_field :video_url, 	:label => "Video URL", instructions: "must be categorized as Video to work" %>
+<%= f.cms_text_field :video_url, 	:label => "Video URL", instructions: "must be categorized as Video to work" %>
