@@ -1,7 +1,8 @@
 module BcmsBlog
   class BlogPost < ActiveRecord::Base
     acts_as_content_block :taggable => true
-
+    enable_template_editor true
+    
     has_attachment :image
 
 
