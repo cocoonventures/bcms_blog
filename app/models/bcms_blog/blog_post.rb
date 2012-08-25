@@ -14,7 +14,6 @@ module BcmsBlog
 
     before_validation   :set_slug
     validates_presence_of :name, :slug, :blog_id, :author_id
-    attr_accessor         :video_url
 
     scope :published_between, lambda { |start, finish|
       { :conditions => [
