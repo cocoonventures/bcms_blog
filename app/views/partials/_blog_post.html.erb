@@ -8,7 +8,7 @@
   end
 %>
 <div id="blog_post_<%= blog_post.id %>" class="blog_post">
-  <% if blog_post.attachment %>
+  <% if blog_post.attachment? %>
     <div class="image">
       <%= image_tag blog_post.attachment.image_path %>
     </div>
