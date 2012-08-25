@@ -102,8 +102,12 @@ module BcmsBlog
     end
     
     # Return true if this model has an attachment
-    def attachment
-      !file.blank?
+    def attachment?
+      !image.blank?
+    end
+    
+    def video_url?
+      !video_url.blank?
     end
   end
 end
