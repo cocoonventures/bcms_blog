@@ -1,2 +1,2 @@
 <% page_title @page_title || @blog.name %>
-<%= render :partial => "partials/blog_post", :collection => @blog_posts %>
+<%= render :partial => "partials/blog_post", :collection => @blog_posts, total_posts: @blog_posts.size %>
